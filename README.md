@@ -222,10 +222,6 @@ git push origin feature/amazing-feature
 # Create a Pull Request
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Google Cloud** for providing the Gemini AI platform
@@ -236,17 +232,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Project Lead**: AI Career Coach Team
-- **Email**: contact@aicareercoach.com
+- **Project Lead**: Aditya Paul
+- **Email**: paul.aditya304@gmail.com
 - **Website**: https://aicareercoach.com
-- **GitHub**: https://github.com/aicareercoach
-
-## 📈 Stats
-
-![GitHub stars](https://img.shields.io/github/stars/aicareercoach/ai-career-coach)
-![GitHub forks](https://img.shields.io/github/forks/aicareercoach/ai-career-coach)
-![GitHub issues](https://img.shields.io/github/issues/aicareercoach/ai-career-coach)
-![GitHub license](https://img.shields.io/github/license/aicareercoach/ai-career-coach)
+- **GitHub**: https://github.com/Paulie-Aditya/ai-career-coach
 
 ---
 

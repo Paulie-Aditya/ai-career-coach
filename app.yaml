@@ -1,0 +1,47 @@
+# Google App Engine configuration for AI Career Coach
+runtime: custom
+env: flex
+
+# Automatic scaling configuration
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 10
+  cool_down_period: 60s
+  cpu_utilization:
+    target_utilization: 0.6
+
+# Resource configuration
+resources:
+  cpu: 2
+  memory_gb: 2
+  disk_size_gb: 10
+
+# Health check configuration
+readiness_check:
+  path: "/health"
+  check_interval_sec: 5
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 2
+
+liveness_check:
+  path: "/health"
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 4
+  success_threshold: 2
+
+# Environment variables
+env_variables:
+  GEMINI_API_KEY: "your_gemini_api_key_here"
+  NEXT_PUBLIC_API_URL: "https://your-project-id.appspot.com"
+
+# Network configuration
+network:
+  forwarded_ports:
+    - 80
+    - 8000
+
+# Beta settings for better performance
+beta_settings:
+  cloud_sql_instances: []

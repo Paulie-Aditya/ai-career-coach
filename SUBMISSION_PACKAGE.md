@@ -191,14 +191,10 @@ GET /health
 
 ## 🤝 Team & Contact
 
-**Project Lead**: AI Career Coach Team  
-**Email**: contact@aicareercoach.com  
-**GitHub**: https://github.com/aicareercoach/ai-career-coach  
+**Project Lead**: Aditya Paul
+**Email**: paul.aditya304@gmail.com
+**GitHub**: https://github.com/Paulie-Aditya/ai-career-coach
 **Website**: https://aicareercoach.com
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -207,15 +203,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Next.js** team for the React framework
 - **Tailwind CSS** for the utility-first CSS framework
 - **Open source community** for inspiration and tools
-
-## 📞 Support
-
-For technical support or questions:
-
-- **Documentation**: See `docs/` folder
-- **Issues**: GitHub Issues page
-- **Email**: support@aicareercoach.com
-- **Discord**: [Community Server](https://discord.gg/aicareercoach)
 
 ---
 
