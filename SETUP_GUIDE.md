@@ -69,6 +69,7 @@ npm run dev
 ### Additional Setup (Optional)
 
 For advanced features and production deployment:
+
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project or select existing
 3. Enable additional APIs as needed
