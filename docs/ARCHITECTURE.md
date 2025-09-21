@@ -281,7 +281,7 @@ Google Cloud Platform:
 - **Database Integration**: PostgreSQL for user data
 - **Authentication**: JWT-based user authentication
 - **Caching Layer**: Redis for response caching
-- **Message Queue**: Celery for background tasks
+- **Time Management**: Advanced timeline and progress tracking
 
 ### Phase 3 Architecture
 
