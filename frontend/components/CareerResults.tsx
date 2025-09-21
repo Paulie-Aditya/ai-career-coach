@@ -6,7 +6,7 @@ import {
   ExternalLink,
   Star,
   Clock,
-  DollarSign,
+  IndianRupee,
   TrendingUp,
   BookOpen,
   ChevronDown,
@@ -53,6 +53,16 @@ export default function CareerResults({
   const [expandedPaths, setExpandedPaths] = useState<Set<number>>(new Set([0]));
   const [expandedSkills, setExpandedSkills] = useState<Set<number>>(new Set());
   const [showShortTerm, setShowShortTerm] = useState(true);
+
+  // Function to clean markdown formatting from text
+  const cleanMarkdown = (text: string): string => {
+    return text
+      .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markdown
+      .replace(/\*(.*?)\*/g, "$1") // Remove italic markdown
+      .replace(/#{1,6}\s/g, "") // Remove heading markdown
+      .replace(/`(.*?)`/g, "$1") // Remove code markdown
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"); // Remove link markdown, keep text
+  };
 
   const togglePath = (index: number) => {
     const newExpanded = new Set(expandedPaths);
@@ -132,7 +142,7 @@ export default function CareerResults({
                     <p className="text-gray-600 mb-4">{path.description}</p>
                     <div className="flex flex-wrap gap-4 text-sm">
                       <div className="flex items-center gap-1 text-green-600">
-                        <DollarSign className="h-4 w-4" />
+                        <IndianRupee className="h-4 w-4" />
                         {path.salary_range}
                       </div>
                       <div className="flex items-center gap-1 text-blue-600">
@@ -156,7 +166,7 @@ export default function CareerResults({
                       Why This Career Fits You:
                     </h4>
                     <p className="text-gray-700 leading-relaxed">
-                      {path.why_fits}
+                      {cleanMarkdown(path.why_fits)}
                     </p>
                   </div>
                 )}
@@ -305,7 +315,7 @@ export default function CareerResults({
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-700 leading-relaxed">
-                    {recommendation}
+                    {cleanMarkdown(recommendation)}
                   </p>
                 </li>
               ))}

@@ -85,14 +85,17 @@ async def get_career_advice(request: CareerRequest):
         - Experience Level: {request.experience_level}
         - Location: {request.location}
 
-        Please provide a comprehensive career analysis in the following JSON format:
+        Please provide a comprehensive career analysis in the following JSON format.
+        IMPORTANT: Use INR currency format for salary ranges (e.g., "₹6 LPA - ₹18 LPA").
+        For overall recommendations, provide plain text without markdown formatting (no ** or * symbols).
+        
         {{
             "career_paths": [
                 {{
                     "title": "Job Title",
                     "description": "Brief description of the role",
                     "why_fits": "Why this career fits the student's profile",
-                    "salary_range": "Expected salary range in INR",
+                    "salary_range": "Expected salary range in INR (e.g., ₹6 LPA - ₹18 LPA)",
                     "growth_prospects": "Career growth potential and opportunities"
                 }}
             ],
@@ -110,7 +113,7 @@ async def get_career_advice(request: CareerRequest):
                             "title": "Resource Title",
                             "type": "course/book/tutorial/certification",
                             "url": "https://example.com",
-                            "cost": "Free/Paid amount",
+                            "cost": "Free/₹500/Paid",
                             "duration": "Time to complete",
                             "rating": 4.5
                         }}
@@ -118,7 +121,7 @@ async def get_career_advice(request: CareerRequest):
                 }}
             ],
             "overall_recommendations": [
-                "General advice and next steps"
+                "General advice and next steps (plain text, no markdown formatting)"
             ]
         }}
 
